@@ -1,0 +1,110 @@
+// main: integ.scss
+
+/* ----- color ----- */
+$theme_color: #2E2C53;
+$event_color: #F3D07A;
+$speaker_color: #75B1A9;
+$news_color: #ACD0CD;
+$brown: #40231C;
+
+/* ----- font ----- */
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap');
+
+@mixin font_reg {
+    font-family: 'Quicksand', 'Roboto', fot-tsukuardgothic-std, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    font-size: 20px;
+    @include mq_max(md) {
+        font-size: 16px;
+    }
+}
+
+@mixin menu_txt {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: $theme_color;
+}
+
+/* ----- parts ----- */
+@mixin sec_title($color) {
+    padding-bottom: 30px;
+    text-align: center;
+    p {
+        display: inline-block;
+        padding: 0 10px;
+        border-bottom: 3px solid $color;
+        border-radius: 3px;
+        font-size: 30px;
+        font-weight: medium;
+        color: $color;
+        @include mq_max(sm) {
+            font-size: 25px;
+        }
+    }
+}
+
+@mixin sec_common {
+    box-sizing: border-box;
+    padding: 100px 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    @include mq_max(sm) {
+        padding: 60px 20px;
+    }
+}
+
+@mixin button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+    margin: 100px auto 0;
+    border: 1px solid $theme_color;
+    border-radius: 5px;
+    background-color: $theme_color;
+    color: white;
+    transition: all .3s ease;
+    text-align: center;
+    line-height: 80px;
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: $theme_color;
+    }
+}
+
+/* ----- page setting ----- */
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    line-height: 2;
+    @include font_reg;
+}
+
+a {
+    @include font_reg;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.page {
+
+}
+
+.jp {
+    display: block;
+}
+
+.en {
+    display: none;
+}

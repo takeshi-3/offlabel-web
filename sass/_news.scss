@@ -1,0 +1,104 @@
+//main: integ.scss
+
+/* ----- archive ----- */
+
+.news {
+    background-color: $news_color;
+    min-height: 100vh;
+    &__arch {
+        @include sec_common;
+        max-width: 1100px;
+    }
+    &__title {
+        @include sec_title(white);
+    }
+}
+
+.news__list {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        width: 30%;
+        box-sizing: border-box;
+        margin: 20px 0;
+        padding: 20px 30px;
+        background-color: white;
+        transition: all .3s ease;
+        @include mq_max(lg) {
+            width: 48%;
+        }
+        @include mq_max(sm) {
+            width: 100%;
+        }
+        &:hover {
+            background-color: #52AEA0;
+        }
+        &__date {
+            color: $theme_color;
+            font-size: 16px;
+        }
+        &__thum {
+            padding: 20px 0;
+            width: 100%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__title {
+            color: $theme_color;
+            padding-bottom: 10px;
+            line-height: 1.6;
+        }
+        &__exp {
+            color: $theme_color;
+            font-size: 16px;
+        }
+    }
+
+    &__item--blank {
+        width: 30%;
+        height: 0;
+    }
+}
+
+/* ----- single ----- */
+.new {
+    background-color: $news_color;
+
+    &__wrap {
+        @include sec_common;
+    }
+
+    &__title {
+        @include sec_title(white);
+    }
+
+    &__date {
+        color: white;
+        text-align: right;
+    }
+
+    &__thum {
+        width: 100%;
+        padding: 30px 0;
+        img {
+            height: auto;
+        }
+    }
+
+    &__exp {
+        color: white;
+    }
+
+    &__back {
+        @include sec_common;
+        padding-top: 0;
+        &__btn {
+            @include button;
+        }
+    }
+}

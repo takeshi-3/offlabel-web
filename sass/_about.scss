@@ -1,0 +1,59 @@
+//main: integ.scss
+
+.about {
+    background-color: $theme_color;
+}
+
+.about__exp {
+    @include sec_common;
+    &__title {
+        @include sec_title(white);
+    }
+
+    &__txt {
+        padding: 20px 0;
+    }
+}
+
+.about__memb {
+    @include sec_common;
+    max-width: 1300px;
+    &__title {
+        @include sec_title(white);
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+    }
+
+    &__per {
+        box-sizing: border-box;
+        margin: 20px 0;
+        padding: 20px 30px;
+        width: 24%;
+        background-color: white;
+        @include mq_max(lg) {
+            width: 48%;
+        }
+        @include mq_max(sm) {
+            width: 100%;
+        }
+        &__name {
+            color: $theme_color;
+            font-weight: bold;
+        }
+        &__img {
+            padding: 15px 0;
+        }
+        &__bel {
+            color: $theme_color;
+            padding-bottom: 10px;
+        }
+        &__pro {
+            color: $theme_color;
+        }
+    }
+}

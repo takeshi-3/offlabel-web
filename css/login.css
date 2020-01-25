@@ -1,0 +1,8 @@
+.login h1 a {
+    background-image: url('../img/common/logo.png');
+}
+
+body, html {
+    background-image: url('../img/common/login_back.png');
+    background-size: cover;
+}

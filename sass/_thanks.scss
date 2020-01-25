@@ -1,0 +1,19 @@
+//main: integ.scss
+
+.thnx {
+    background-color: white;
+    min-height: 100vh;
+    &__main {
+        @include sec_common;
+    }
+    &__title {
+        @include sec_title($theme_color);
+    }
+    &__exp {
+        padding-top: 30px;
+        color: $theme_color;
+    }
+    &__btn {
+        @include button;
+    }
+}

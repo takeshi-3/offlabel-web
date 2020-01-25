@@ -1,0 +1,25 @@
+// compileCompressed: ../css/style.min.css
+
+/*--- base ---*/
+@import 'func';
+@import 'base';
+// @import 'parts';
+
+/*--- parts ---*/
+@import 'header';
+// @import 'footer';
+
+/*--- page --- */
+@import 'home';
+@import 'lang';
+@import 'join';
+@import 'about';
+@import 'event';
+@import 'speaker';
+@import 'news';
+@import 'thanks';
+// @import '404';
+
+.en {
+    display: none;
+}
